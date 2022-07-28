@@ -8,11 +8,11 @@
  *
  ******************************/
 $config_version = 1;
-$app_name       = '_APPNAME';
+$app_name       = '__APPNAME';
 $app_production = false;
 $env            = 'dev';
 $https          = true;
-$table_prefix   = '_APP_PREFIX_'; // Variable used by WP - so don't rename
+$table_prefix   = '__APP_PREFIX_'; // Variable used by WP - so don't rename
 
 /** Multisite */
 $is_multisite        = false;
@@ -76,9 +76,9 @@ if ( $env == 'stage' || $env == 'prod' ) {
 
 if ( $env == 'dev' ) {
 	/** DB */
-	define( 'DB_NAME', '_APPNAME' );
-	define( 'DB_USER', '_USER' );
-	define( 'DB_PASSWORD', '_PASS' );
+	define( 'DB_NAME', '__APPNAME' );
+	define( 'DB_USER', '__USER' );
+	define( 'DB_PASSWORD', '__PASS' );
 	define( 'DB_HOST', 'mysql' );
 
 	/** Debugging */

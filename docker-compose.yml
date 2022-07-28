@@ -8,7 +8,7 @@ services:
     build:
       context: .
       dockerfile: nginx.dockerfile
-    container_name: _APPNAME_nginx
+    container_name: __APPNAME_nginx
     ports:
       - 80:80
       - 443:443
@@ -23,15 +23,15 @@ services:
 
   mysql:
     image: mysql:5.7.29
-    container_name: _APPNAME_mysql
+    container_name: __APPNAME_mysql
     restart: always
     ports:
       - 3306:3306
     environment:
       MYSQL_DATABASE: _APPNAME
-      MYSQL_USER: _USER
-      MYSQL_PASSWORD: _PASS
-      MYSQL_ROOT_PASSWORD: _PASS
+      MYSQL_USER: __USER
+      MYSQL_PASSWORD: __PASS
+      MYSQL_ROOT_PASSWORD: __PASS
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     volumes:
@@ -43,7 +43,7 @@ services:
     image: phpmyadmin:latest
     links:
       - mysql
-    container_name: _APPNAME_phpmyadmin
+    container_name: __APPNAME_phpmyadmin
     ports:
       - 8080:80
     environment:
@@ -55,7 +55,7 @@ services:
     build:
       context: .
       dockerfile: php.dockerfile
-    container_name: _APPNAME_php
+    container_name: __APPNAME_php
     volumes:
       - ./app:/var/www/html:delegated
     networks:
@@ -65,7 +65,7 @@ services:
     build:
       context: .
       dockerfile: php.dockerfile
-    container_name: _APPNAME_wp
+    container_name: __APPNAME_wp
     entrypoint: ['wp', '--allow-root']
     volumes:
       - ./app:/var/www/html:delegated

@@ -1,6 +1,6 @@
 {
-    "name": "bbcbirk/_APPNAME",
-    "description": "WordPress project for _APPNAME",
+    "name": "bbcbirk/__APPNAME",
+    "description": "WordPress project for __APPNAME",
     "type": "wordpress-project",
     "keywords": [
         "wordpress"
