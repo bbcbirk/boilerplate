@@ -8,7 +8,9 @@ This Boilerplate is for local WordPress development on a Windows machine. In the
 - **github cli**
 
 Github token is required in order to create new projects https://cli.github.com/, https://github.com/ 
-Powershell command is `app-create`
+Powershell command is `app-create` 
+
+Admin Login Url is http://appname/wp/wp-login.php 
 
 # docker-compose-wordpress
 A simplified yet refined Docker Compose workflow that sets up a LEMP network of containers for local WordPress development. If you'd like more interactive info, there's a [video tutorial](https://www.youtube.com/watch?v=kIqWxjDj4IU) that walk you through setup and usage of this environment.

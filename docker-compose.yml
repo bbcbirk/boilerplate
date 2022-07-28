@@ -28,7 +28,7 @@ services:
     ports:
       - 3306:3306
     environment:
-      MYSQL_DATABASE: __APPNAME
+      MYSQL_DATABASE: _APPNAME
       MYSQL_USER: __USER
       MYSQL_PASSWORD: __PASS
       MYSQL_ROOT_PASSWORD: __PASS
