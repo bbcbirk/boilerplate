@@ -1,0 +1,59 @@
+{
+    "name": "bbcbirk/_APPNAME",
+    "description": "WordPress project for _APPNAME",
+    "type": "wordpress-project",
+    "keywords": [
+        "wordpress"
+    ],
+    "authors": [
+        {
+            "name": "Birk Thestrup Blauner",
+            "email": "birkblauner@gmail.com"
+        }
+    ],
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "johnpbloch/wordpress": "^6.0",
+        "cmb2/cmb2": "^2.10",
+        "composer/installers": "^2.1",
+        "wpackagist-plugin/duracelltomi-google-tag-manager":"1.16",
+        "wpackagist-plugin/ewww-image-optimizer":"6.7.0",
+        "wpackagist-plugin/redirection":"5.3.0",
+        "wpackagist-plugin/safe-svg":"2.0.2",
+        "wpackagist-plugin/wordpress-seo":"19.4",
+        "wpackagist-plugin/wp-maintenance-mode":"2.4.6"
+    },
+    "extra": {
+        "wordpress-install-dir": "app/wp",
+        "installer-paths": {
+            "app/wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "app/wp-content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "rm -rf app/wp/wp-content"
+        ],
+        "post-update-cmd": [
+            "rm -rf app/wp/wp-content"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "johnpbloch/wordpress-core-installer": true,
+            "composer/installers": true
+        }
+    }
+}
