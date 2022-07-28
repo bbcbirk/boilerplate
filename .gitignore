@@ -18,3 +18,4 @@ sitemap.xml
 node_modules
 .vscode/
 mysql/
+*.pem
