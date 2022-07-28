@@ -7,9 +7,9 @@ app/wp-content/languages/*
 app/wp-content/languages/plugins/*
 app/wp-content/uploads
 app/wp-content/plugins/*
-!app/wp-content/plugins/APPNAME*/
+!app/wp-content/plugins/__APPNAME*/
 app/wp-content/themes/*
-!app/wp-content/themes/APPNAME*/
+!app/wp-content/themes/__APPNAME*/
 composer.lock
 sitemap.xml
 *.log
